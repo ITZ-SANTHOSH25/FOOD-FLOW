@@ -62,16 +62,36 @@
 
   /* ---------------- API ---------------- */
   async function api(path, method = 'GET', body) {
-    const res = await fetch(`${API_BASE_URL}${path}`, {
-      method,
-      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
-      body: body ? JSON.stringify(body) : undefined
-    });
-    if (res.status === 401) { logout(); throw new Error('Session expired'); }
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) throw new Error(data.error || 'Request failed');
-    return data;
+  const url = `${API_BASE_URL}${path}`;
+
+  console.log('API REQUEST:', method, url);
+
+  const res = await fetch(url, {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + token
+    },
+    body: body ? JSON.stringify(body) : undefined
+  });
+
+  const data = await res.json().catch(() => ({}));
+
+  console.log('API RESPONSE:', res.status, data);
+
+  if (res.status === 401) {
+    logout();
+    throw new Error('Session expired');
   }
+
+  if (!res.ok) {
+    throw new Error(
+      `${method} ${path} failed (${res.status}): ${data.error || 'Unknown error'}`
+    );
+  }
+
+  return data;
+}
 
   function logout() {
     localStorage.removeItem('ff_token');

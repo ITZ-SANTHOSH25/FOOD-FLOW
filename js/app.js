@@ -1276,9 +1276,7 @@ ${icon('download')} Export</button> +
       } catch (e) { toast('Could not start batch', e.message, 'error'); btn.disabled = false; }
     });
   }
-
-  function openStockModal(id) {
-     function openInventoryModal() {
+ function openInventoryModal() {
   const products = state.data.products;
 
   if (!products.length) {
@@ -1394,6 +1392,7 @@ ${icon('download')} Export</button> +
       } catch (e) { toast('Update failed', e.message, 'error'); btn.disabled = false; }
     });
   }
+  function openStockModal(id) {
 
   function openAuditModal() {
     const body = `<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">

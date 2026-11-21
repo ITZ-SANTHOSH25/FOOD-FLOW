@@ -1366,8 +1366,8 @@ return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across 
     }
   });
 }
+   function openStockModal(id) {
     const i = state.data.inventory.find((x) => x.id === id);
-    function openStockModal(id) {
     if (!i) return;
     const body = `<div style="padding-bottom:10px">
         <div class="cell-main" style="font-size:16px">${esc(i.name)}</div>

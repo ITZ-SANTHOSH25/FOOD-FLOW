@@ -1367,6 +1367,7 @@ return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across 
   });
 }
     const i = state.data.inventory.find((x) => x.id === id);
+    function openStockModal(id) {
     if (!i) return;
     const body = `<div style="padding-bottom:10px">
         <div class="cell-main" style="font-size:16px">${esc(i.name)}</div>
@@ -1389,8 +1390,7 @@ return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across 
       } catch (e) { toast('Update failed', e.message, 'error'); btn.disabled = false; }
     });
   }
-  function openStockModal(id) {
-   function openAuditModal() {
+ function openAuditModal() {
     const body = `<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
         <div class="field"><label>Audit type</label><select class="select" id="auType">${['Pre-Production', 'In-Process', 'Final Dispatch', 'Inventory', 'Financial'].map((t) => `<option>${t}</option>`).join('')}</select></div>
         <div class="field"><label>Score (0–100)</label><input class="input" type="number" id="auScore" value="92" min="0" max="100" /></div>

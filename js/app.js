@@ -733,7 +733,11 @@
     if (state.invFilter !== 'all') rows = rows.filter((i) => i.status === state.invFilter);
     const canEdit = ['production', 'admin', 'owner'].includes(state.user.role);
     return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across three warehouses.',
-      `<button class="btn btn-sm btn-ghost" data-action="export-inventory">${icon('download')} Export</button>`) +
+      `<button class="btn btn-sm" data-action="new-inventory">
+${icon('plus')} Add Inventory</button>
+
+<button class="btn btn-sm btn-ghost" data-action="export-inventory">
+${icon('download')} Export</button> +
       `<div class="kpi-grid">
         ${kpi('Inventory Value', inrCompact(d.kpis.inventoryValue), { icon: 'inventory', note: 'at unit cost' })}
         ${kpi('SKUs Tracked', d.inventory.length, { icon: 'box', tone: 'info', note: 'across 3 warehouses' })}
@@ -992,6 +996,7 @@
 
   function bindView() {
     $$('[data-action="new-product"]').forEach((b) => b.addEventListener('click', openProductModal));
+    $$('[data-action="new-inventory"]').forEach((b) => b.addEventListener('click', openInventoryModal));
     $$('[data-action="new-order"]').forEach((b) => b.addEventListener('click', openOrderModal));
     $$('[data-action="new-batch"]').forEach((b) => b.addEventListener('click', () => openBatchModal()));
     $$('[data-action="new-audit"]').forEach((b) => b.addEventListener('click', () => openAuditModal()));
@@ -1273,6 +1278,99 @@
   }
 
   function openStockModal(id) {
+     function openInventoryModal() {
+  const products = state.data.products;
+
+  if (!products.length) {
+    toast('No products', 'Register a product first.', 'error');
+    return;
+  }
+
+  const body = `
+    <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+
+      <div class="field">
+        <label>Product *</label>
+        <select class="select" id="invProduct">
+          ${products.map(p =>
+            `<option value="${esc(p.id)}">${esc(p.name)}</option>`
+          ).join('')}
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Warehouse *</label>
+        <select class="select" id="invWarehouse">
+          <option>Main Warehouse</option>
+          <option>Warehouse 2</option>
+          <option>Warehouse 3</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Opening Stock *</label>
+        <input class="input" type="number" id="invStock" min="0" value="100">
+      </div>
+
+      <div class="field">
+        <label>Reorder Level *</label>
+        <input class="input" type="number" id="invReorder" min="0" value="20">
+      </div>
+
+      <div class="field">
+        <label>Batch Number *</label>
+        <input class="input" id="invBatch" placeholder="IDL-B001">
+      </div>
+
+      <div class="field">
+        <label>Expiry Date *</label>
+        <input class="input" type="date" id="invExpiry">
+      </div>
+
+      <div class="field">
+        <label>Unit Cost (₹)</label>
+        <input class="input" type="number" id="invCost" min="0" step="0.01">
+      </div>
+
+    </div>
+  `;
+
+  const m = openModal({
+    title: 'Add Inventory Item',
+    sub: 'Register opening stock for an existing product.',
+    body,
+    footer: `
+      <button class="btn btn-sm btn-ghost" data-close>Cancel</button>
+      <button class="btn btn-sm" id="invSave">Save Inventory</button>
+    `
+  });
+
+  $('#invSave', m.back).addEventListener('click', async () => {
+    const btn = $('#invSave', m.back);
+    btn.disabled = true;
+
+    try {
+      await api('/api/inventory', 'POST', {
+        productId: $('#invProduct', m.back).value,
+        warehouse: $('#invWarehouse', m.back).value,
+        stock: Number($('#invStock', m.back).value),
+        reorderLevel: Number($('#invReorder', m.back).value),
+        batch: $('#invBatch', m.back).value.trim(),
+        expiry: $('#invExpiry', m.back).value,
+        unitCost: Number($('#invCost', m.back).value)
+      });
+
+      m.close();
+      await refresh();
+
+      toast('Inventory added', 'Opening stock registered successfully.', 'success');
+
+    } catch (e) {
+      toast('Could not add inventory', e.message, 'error');
+      btn.disabled = false;
+    }
+  });
+}
     const i = state.data.inventory.find((x) => x.id === id);
     if (!i) return;
     const body = `<div style="padding-bottom:10px">

@@ -733,12 +733,10 @@
     if (state.invFilter !== 'all') rows = rows.filter((i) => i.status === state.invFilter);
     const canEdit = ['production', 'admin', 'owner'].includes(state.user.role);
     return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across three warehouses.',
-      `<button class="btn btn-sm" data-action="new-inventory">
-${icon('plus')} Add Inventory</button>
-
-<button class="btn btn-sm btn-ghost" data-action="export-inventory">
-${icon('download')} Export</button> +
-      `<div class="kpi-grid">
+return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across three warehouses.',
+  `<button class="btn btn-sm" data-action="new-inventory">${icon('plus')} Add Inventory</button>
+  <button class="btn btn-sm btn-ghost" data-action="export-inventory">${icon('download')} Export</button>`) +
+  `<div class="kpi-grid">
         ${kpi('Inventory Value', inrCompact(d.kpis.inventoryValue), { icon: 'inventory', note: 'at unit cost' })}
         ${kpi('SKUs Tracked', d.inventory.length, { icon: 'box', tone: 'info', note: 'across 3 warehouses' })}
         ${kpi('Low Stock', d.kpis.lowStockCount, { icon: 'alert', tone: 'warn', note: 'at or below reorder' })}

@@ -732,7 +732,6 @@
     let rows = d.inventory.slice();
     if (state.invFilter !== 'all') rows = rows.filter((i) => i.status === state.invFilter);
     const canEdit = ['production', 'admin', 'owner'].includes(state.user.role);
-    return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across three warehouses.',
 return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across three warehouses.',
   `<button class="btn btn-sm" data-action="new-inventory">${icon('plus')} Add Inventory</button>
   <button class="btn btn-sm btn-ghost" data-action="export-inventory">${icon('download')} Export</button>`) +

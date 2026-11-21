@@ -1390,7 +1390,6 @@ return pageHead('Inventory', 'Stock cover, reorder levels and shelf-life across 
     });
   }
   function openStockModal(id) {
-
   function openAuditModal() {
     const body = `<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
         <div class="field"><label>Audit type</label><select class="select" id="auType">${['Pre-Production', 'In-Process', 'Final Dispatch', 'Inventory', 'Financial'].map((t) => `<option>${t}</option>`).join('')}</select></div>

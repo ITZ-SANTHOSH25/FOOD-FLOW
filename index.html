@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FOODFLOW — From Order to Production, Everything Connected.</title>
+<meta name="description" content="FOODFLOW is an order-to-audit management platform for South Indian food manufacturers — sales, production, inventory, finance and audit in one connected system." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23B76E4B'/%3E%3Cpath d='M16 26V12M16 12c0-4 2.6-6.6 6.6-6.6 0 4-2.6 6.6-6.6 6.6ZM16 17c0-4-2.6-6.6-6.6-6.6 0 4 2.6 6.6 6.6 6.6Z' stroke='%23FFF9EF' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/landing.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="landing">
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="siteNav">
+  <div class="container">
+    <a href="#" class="brand" aria-label="FoodFlow home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M12 21V9" />
+          <path d="M12 9c0-3 2-5 5-5 0 3-2 5-5 5Z" />
+          <path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5Z" />
+          <path d="M12 17c0-2.5 2-4.5 4.5-4.5 0 2.5-2 4.5-4.5 4.5Z" />
+        </svg>
+      </span>
+      <span>
+        <span class="brand-name">Foodflow</span>
+        <span class="brand-sub">Order · Production · Audit</span>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#platform">Platform</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#roles">Roles</a>
+      <a href="#craft">Why FoodFlow</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="login.html" class="nav-signin">Sign in</a>
+      <a href="login.html" class="btn btn-sm">Get Started
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#platform">Platform</a>
+  <a href="#workflow">Workflow</a>
+  <a href="#roles">Roles</a>
+  <a href="#craft">Why FoodFlow</a>
+  <a href="login.html" style="color:var(--terracotta)">Sign in →</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-wash"></div>
+  <div class="hero-grain"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="tag anim-up"><span class="dot"></span> Crafted for South Indian Food Manufacturing</span>
+
+      <h1 class="anim-up delay-1">From Order to Production,<em>Everything Connected.</em></h1>
+
+      <p class="hero-sub anim-up delay-2">
+        Smart manufacturing. Seamless operations. Complete business control.
+        One warm, considered workspace where every order, batch, invoice and audit
+        moves together — from the first phone call to the final signature.
+      </p>
+
+      <div class="hero-actions anim-up delay-3">
+        <a href="login.html" class="btn">Get Started
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#workflow" class="btn btn-outline">Explore System
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-meta anim-up delay-4">
+        <div class="hm"><strong>One system</strong><span>Orders to audit</span></div>
+        <div class="divider"></div>
+        <div class="hm"><strong>Live records</strong><span>Database-backed</span></div>
+        <div class="divider"></div>
+        <div class="hm"><strong>Traceable</strong><span>Stock movements</span></div>
+      </div>
+    </div>
+
+    <aside class="hero-panel anim-scale delay-3" aria-label="FoodFlow workflow">
+      <div class="hp-head"><span class="hp-title">Connected workflow</span><span class="hp-live"><i></i> Workflow</span></div>
+      <div class="hp-step done"><span class="hp-dot">1</span><span class="hp-name">Purchase & raw stock</span></div>
+      <div class="hp-step done"><span class="hp-dot">2</span><span class="hp-name">BOM-based production</span></div>
+      <div class="hp-step active"><span class="hp-dot">3</span><span class="hp-name">Sales order & approval</span></div>
+      <div class="hp-step"><span class="hp-dot">4</span><span class="hp-name">GST invoice & dispatch</span></div>
+      <div class="hp-step"><span class="hp-dot">5</span><span class="hp-name">Payments & audit reports</span></div>
+    </aside>
+  </div>
+
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-item"><strong>2008</strong><span>Manufacturing Since</span></div>
+    <div class="trust-item"><strong>38</strong><span>Districts Supplied</span></div>
+    <div class="trust-item"><strong>6</strong><span>Connected Roles</span></div>
+    <div class="trust-item"><strong>0</strong><span>Spreadsheets Required</span></div>
+    <div class="trust-note">“The whole kitchen and the whole office, on one page.”</div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM / FLOW ============ -->
+<section class="section flow" id="platform">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Platform</span>
+      <h2>One continuous thread from <em>enquiry to audit.</em></h2>
+      <p>Most food businesses run on disconnected registers, WhatsApp approvals and month-end guesswork. FOODFLOW replaces that with a single operational spine — every hand-off recorded, every number traceable.</p>
+    </div>
+
+    <div class="flow-grid" id="workflow">
+      <article class="flow-card reveal">
+        <div class="fc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+        </div>
+        <div class="num">01 — Capture</div>
+        <h3>Order Intake</h3>
+        <p>Salesmen raise orders from the field with live pricing, stock availability and customer credit status — no callbacks, no re-keying.</p>
+      </article>
+
+      <article class="flow-card reveal d1">
+        <div class="fc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <div class="num">02 — Approve</div>
+        <h3>Review &amp; Confirmation</h3>
+        <p>Admin validates quantities, dispatch windows and payment terms. Approved orders flow straight to the production planner.</p>
+      </article>
+
+      <article class="flow-card reveal d2">
+        <div class="fc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 20h18M6 20V9l6-4 6 4v11"/><path d="M10 20v-5h4v5"/></svg>
+        </div>
+        <div class="num">03 — Plan</div>
+        <h3>Production Scheduling</h3>
+        <p>Batches are allocated across seven lines with shift, supervisor and planned yield — respecting shelf life and raw material cover.</p>
+      </article>
+
+      <article class="flow-card reveal">
+        <div class="fc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 2 4-6"/></svg>
+        </div>
+        <div class="num">04 — Produce</div>
+        <h3>Batch &amp; Variance</h3>
+        <p>Actual output, wastage and yield are logged against plan. Any variance beyond tolerance raises an alert the same shift.</p>
+      </article>
+
+      <article class="flow-card reveal d1">
+        <div class="fc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        </div>
+        <div class="num">05 — Dispatch</div>
+        <h3>Packing &amp; Invoicing</h3>
+        <p>Packed consignments generate GST invoices automatically. Receivables age in real time, by customer and by salesman.</p>
+      </article>
+
+      <article class="flow-card reveal d2">
+        <div class="fc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="num">06 — Assure</div>
+        <h3>Audit &amp; Reconciliation</h3>
+        <p>Pre-production, in-process, dispatch, inventory and financial audits close the loop with scored findings and corrective actions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROLES ============ -->
+<section class="section roles" id="roles">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Built for every desk</span>
+      <h2>Five roles. One shared <em>source of truth.</em></h2>
+      <p>Each person sees exactly the workspace they need — and nothing they don't. Permissions, dashboards and actions are tailored to the way the work actually happens.</p>
+    </div>
+
+    <div class="roles-grid">
+      <article class="role-card reveal">
+        <div class="r-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 21c0-3.8 3.1-6.2 7-6.2s7 2.4 7 6.2"/></svg>
+        </div>
+        <h3>Salesman</h3>
+        <p>Field order book, customer ledger, stock availability and collection follow-ups.</p>
+        <span class="r-count">Order intake &amp; receivables</span>
+      </article>
+
+      <article class="role-card reveal d1">
+        <div class="r-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2.2"/></svg>
+        </div>
+        <h3>Admin</h3>
+        <p>Order approval, dispatch coordination, master data and team access control.</p>
+        <span class="r-count">Operations control</span>
+      </article>
+
+      <article class="role-card reveal d2">
+        <div class="r-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 20h18M5 20V8l7-4 7 4v12"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Production Supervisor</h3>
+        <p>Batch scheduling, line loading, yield capture and variance escalation.</p>
+        <span class="r-count">Shop floor</span>
+      </article>
+
+      <article class="role-card reveal d3">
+        <div class="r-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18M7 7h7a3 3 0 010 6H7h8a3 3 0 010 6H7"/></svg>
+        </div>
+        <h3>Accountant / Auditor</h3>
+        <p>GST invoicing, ageing, reconciliation and scored compliance audits.</p>
+        <span class="r-count">Finance &amp; assurance</span>
+      </article>
+
+      <article class="role-card reveal d4">
+        <div class="r-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+        </div>
+        <h3>Owner</h3>
+        <p>Consolidated P&amp;L view, regional performance, audit posture and exceptions.</p>
+        <span class="r-count">Business overview</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CRAFT ============ -->
+<section class="section craft" id="craft">
+  <div class="container">
+    <div class="craft-grid">
+      <div class="craft-visual reveal">
+        <div class="craft-frame">
+          <img src="assets/cafe-bg.jpg" alt="Watercolour illustration of a warm South Indian café interior" />
+        </div>
+        <div class="craft-quote">
+          <p>“Software should feel like the place it comes from — warm, unhurried, and quietly precise.”</p>
+          <span>FoodFlow Design Principle No. 01</span>
+        </div>
+      </div>
+
+      <div class="craft-copy reveal d1">
+        <span class="eyebrow">Why FoodFlow</span>
+        <h2 style="font-size:clamp(32px,3.6vw,46px);margin:14px 0 18px;font-weight:500">Enterprise rigour, <em style="font-style:italic;color:var(--terracotta)">without the cold.</em></h2>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;max-width:480px">
+          We built FOODFLOW for a family-run manufacturer in Tiruchirappalli that had outgrown its registers.
+          Every screen is designed around a real hand-off — and every number can be traced back to the person who entered it.
+        </p>
+
+        <div class="craft-list">
+          <div class="craft-item">
+            <span class="ci-num">i.</span>
+            <div>
+              <h4>Traceable by design</h4>
+              <p>Order → batch → invoice → audit. Every record keeps its lineage, so a recall or a query takes minutes, not days.</p>
+            </div>
+          </div>
+          <div class="craft-item">
+            <span class="ci-num">ii.</span>
+            <div>
+              <h4>Variance before it becomes loss</h4>
+              <p>Yield, wastage and stock cover are compared to plan continuously, with alerts routed to the person who can act.</p>
+            </div>
+          </div>
+          <div class="craft-item">
+            <span class="ci-num">iii.</span>
+            <div>
+              <h4>Made for Indian food operations</h4>
+              <p>GST invoicing, credit terms, shelf-life-sensitive batches, regional distribution and multi-unit warehouses.</p>
+            </div>
+          </div>
+          <div class="craft-item">
+            <span class="ci-num">iv.</span>
+            <div>
+              <h4>Calm, legible interfaces</h4>
+              <p>Serif headings, warm paper tones and generous spacing — a workspace people are happy to open at 7 a.m.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="eyebrow" style="color:#D9A583">Begin the flow</span>
+      <h2 style="margin-top:16px">Your next order deserves a <em>better journey.</em></h2>
+      <p>Sign in to the FOODFLOW demo workspace and walk a live order through approval, production, dispatch and audit.</p>
+      <div class="cta-actions">
+        <a href="login.html" class="btn">Get Started
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#platform" class="btn btn-outline">Explore System</a>
+      </div>
+      <div class="cta-seal">FoodFlow<br/>Foods Pvt. Ltd.<br/>Tiruchirappalli<br/>Est. 2008</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 21V9" /><path d="M12 9c0-3 2-5 5-5 0 3-2 5-5 5Z" />
+              <path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5Z" /><path d="M12 17c0-2.5 2-4.5 4.5-4.5 0 2.5-2 4.5-4.5 4.5Z" />
+            </svg>
+          </span>
+          <span><span class="brand-name">Foodflow</span><span class="brand-sub">Order · Production · Audit</span></span>
+        </a>
+        <p class="footer-about">An order-to-audit management system for South Indian food manufacturers. Built as part of the NIT Tiruchirappalli Winter Internship 2026.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <a href="#platform">Overview</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#roles">Roles</a>
+        <a href="login.html">Sign in</a>
+      </div>
+      <div class="footer-col">
+        <h5>Modules</h5>
+        <a href="login.html">Orders</a>
+        <a href="login.html">Production</a>
+        <a href="login.html">Inventory</a>
+        <a href="login.html">Audit &amp; Finance</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">FOODFLOW</a>
+        <a href="#">Tiruchirappalli, Tamil Nadu</a>
+        <a href="#">hello@foodflow.in</a>
+        <a href="#">+91 431 244 7788</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FOODFLOW · NIT Trichy Winter Internship</span>
+      <div class="fb-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav state
+  const nav = document.getElementById('siteNav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Gentle hero parallax
+  const bg = document.querySelector('.hero-bg');
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    window.addEventListener('scroll', () => {
+      const y = Math.min(window.scrollY, 900);
+      if (bg) bg.style.transform = `scale(1.06) translate3d(0, ${y * 0.06}px, 0)`;
+    }, { passive: true });
+  }
+</script>
+</body>
+</html>
